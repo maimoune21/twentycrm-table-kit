@@ -1,0 +1,697 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+/* gradient button used as primary in your forms */
+.bg-gradient {
+  position: relative;
+  background: linear-gradient(138deg,
+      rgba(255, 66, 130, 1) 0%,
+      rgba(255, 107, 53, 1) 71%,
+      rgba(255, 81, 53, 1) 98%);
+  color: white;
+  border: none;
+  transition:
+    opacity 0.15s ease,
+    transform 0.12s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.btn-gradient {
+  position: relative;
+  background: linear-gradient(138deg,
+      rgba(255, 66, 130, 1) 0%,
+      rgba(255, 107, 53, 1) 71%,
+      rgba(255, 81, 53, 1) 98%);
+  color: white;
+  border: none;
+  transition:
+    opacity 0.15s ease,
+    transform 0.12s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.btn-gradient::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100%;
+  background-image: linear-gradient(120deg,
+      rgba(255, 255, 255, 0) 30%,
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0) 70%);
+  top: 0;
+  left: -100px;
+  opacity: 0.6;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.btn-gradient:hover {
+  opacity: 0.95;
+  transform: translateY(-1px);
+}
+
+.btn-gradient:hover::before {
+  animation: shine 1.5s ease-out;
+}
+
+.btn-gradient:active {
+  transform: translateY(0);
+  opacity: 0.92;
+}
+
+/* Stable gradient button - no hover movement */
+.stable-btn-gradient {
+  position: relative;
+  background: linear-gradient(138deg,
+      rgba(255, 66, 130, 1) 0%,
+      rgba(255, 107, 53, 1) 71%,
+      rgba(255, 81, 53, 1) 98%);
+  color: white;
+  border: none;
+  transition:
+    opacity 0.15s ease,
+    transform 0.12s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.stable-btn-gradient::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100%;
+  background-image: linear-gradient(120deg,
+      rgba(255, 255, 255, 0) 30%,
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0) 70%);
+  top: 0;
+  left: -100px;
+  opacity: 0.6;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.stable-btn-gradient:hover {
+  opacity: 0.95;
+}
+
+.stable-btn-gradient:hover::before {
+  animation: shine 1.5s ease-out;
+}
+
+.stable-btn-gradient:active {
+  opacity: 0.92;
+}
+
+/* Secondary gradient button */
+.btn-gradient-secondary {
+  position: relative;
+  background: linear-gradient(138deg, #ff4282 0%, #ff5135 100%);
+  color: white;
+  border: none;
+  transition:
+    opacity 0.15s ease,
+    transform 0.12s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.btn-gradient-secondary::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100%;
+  background-image: linear-gradient(120deg,
+      rgba(255, 255, 255, 0) 30%,
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0) 70%);
+  top: 0;
+  left: -100px;
+  opacity: 0.6;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.btn-gradient-secondary:hover {
+  opacity: 0.95;
+  transform: translateY(-1px);
+}
+
+.btn-gradient-secondary:hover::before {
+  animation: shine 1.5s ease-out;
+}
+
+.btn-gradient-secondary:active {
+  transform: translateY(0);
+  opacity: 0.92;
+}
+
+/* Shine effect - reusable class */
+.shine-effect {
+  position: relative;
+  overflow: hidden;
+}
+
+.shine-effect::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100%;
+  background-image: linear-gradient(120deg,
+      rgba(255, 255, 255, 0) 30%,
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0) 70%);
+  top: 0;
+  left: -100px;
+  opacity: 0.6;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.shine-effect:hover::before {
+  animation: shine 1.5s ease-out;
+}
+
+@keyframes shine {
+  0% {
+    left: -100px;
+  }
+
+  60% {
+    left: 100%;
+  }
+
+  to {
+    left: 100%;
+  }
+}
+
+/* Gradient text effect for reusable gradient text styling */
+
+/* Score bar fill animation (used in CV scoring) */
+@keyframes scoreBarFill {
+  from {
+    width: 0%;
+  }
+
+  to {
+    width: var(--score-width);
+  }
+}
+
+.score-bar-fill {
+  animation: scoreBarFill 1.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.text-gradient {
+  background: linear-gradient(138deg,
+      rgba(255, 66, 130, 1) 0%,
+      rgba(255, 107, 53, 1) 71%,
+      rgba(255, 81, 53, 1) 98%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* black solid button style like on ta capture (if you prefer full black) */
+.btn-black {
+  background-color: #000;
+  color: white;
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+}
+
+/* thin card centered layout helpers */
+.auth-page-center {
+  min-height: calc(100vh - 120px);
+  /* adjust to header height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 600px;
+  background: white;
+  border: 1px solid #e6e6e9;
+  padding: 2rem;
+  border-radius: 6px;
+  box-shadow: 0 6px 20px rgba(20, 20, 30, 0.03);
+}
+
+.input-style {
+  height: 3rem;
+  width: 100%;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(118, 118, 118, 0.2);
+  background-color: transparent;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  transition: all 0.3s ease;
+}
+
+.input-style:hover {
+  border-color: #ff4282;
+}
+
+.input-style:focus {
+  border-color: #ff4282;
+  outline: none;
+  box-shadow: none;
+}
+
+/* Dans votre fichier CSS global ou tailwind.config.js */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+  /* Chrome, Safari and Opera */
+}
+
+.font-rubik {
+  font-family: "Rubik", sans-serif;
+}
+
+.font-outfit {
+  font-family: "Outfit", sans-serif;
+}
+
+/* Custom scrollbar for sidebar scrollable area */
+.sidebar .kt-scrollable-y-hover {
+  scrollbar-width: none;
+  scrollbar-color: var(--primary) transparent;
+}
+
+/* WebKit browsers */
+.sidebar .kt-scrollable-y-hover::-webkit-scrollbar {
+  width: 10px;
+}
+
+.sidebar .kt-scrollable-y-hover::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sidebar .kt-scrollable-y-hover::-webkit-scrollbar-thumb {
+  /* try to use primary color with a light alpha via color-mix; fallback to solid var(--primary) */
+  background-color: color-mix(in srgb, var(--primary) 20%, transparent);
+  background-color: var(--primary);
+  opacity: 0.22;
+  border-radius: 9999px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+.sidebar .kt-scrollable-y-hover:hover::-webkit-scrollbar-thumb {
+  background-color: color-mix(in srgb, var(--primary) 36%, transparent);
+  background-color: var(--primary);
+  opacity: 0.38;
+}
+
+/* Dark variant */
+.sidebar.dark .kt-scrollable-y-hover::-webkit-scrollbar-thumb {
+  background-color: color-mix(in srgb, var(--primary) 18%, transparent);
+  background-color: var(--primary);
+  opacity: 0.14;
+}
+
+.sidebar.dark .kt-scrollable-y-hover:hover::-webkit-scrollbar-thumb {
+  background-color: color-mix(in srgb, var(--primary) 30%, transparent);
+  background-color: var(--primary);
+  opacity: 0.26;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+@keyframes shine {
+  to {
+    left: 100%;
+  }
+}
+
+.btn-secondary {
+  position: relative;
+  background: linear-gradient(138deg, #1d3053 0%, #2a4a6b 50%, #1d3053 100%);
+  color: #fff;
+  white-space: nowrap;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  border: none;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  font-weight: bold;
+}
+
+.btn-secondary::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100%;
+  background-image: linear-gradient(120deg,
+      rgba(255, 255, 255, 0) 30%,
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0) 70%);
+  top: 0;
+  left: -100px;
+  opacity: 0.6;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.btn-secondary:hover::before {
+  animation: shine 1.5s ease-out;
+}
+
+.btn-secondary:hover {
+  background: linear-gradient(138deg, #1a2847 0%, #253d5a 50%, #1a2847 100%);
+  transform: scale(1.01);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.btn-secondary-static {
+  position: relative;
+  background: linear-gradient(138deg, #1d3053 0%, #2a4a6b 50%, #1d3053 100%);
+  color: #fff;
+  white-space: nowrap;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  border: none;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  font-weight: bold;
+}
+
+.btn-secondary-static::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100%;
+  background-image: linear-gradient(120deg,
+      rgba(255, 255, 255, 0) 30%,
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0) 70%);
+  top: 0;
+  left: -100px;
+  opacity: 0.6;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.btn-secondary-static:hover::before {
+  animation: shine 1.5s ease-out;
+}
+
+/* Job Description Content Styling */
+.job-description-content h1 {
+  font-size: 0.8775rem;
+  font-weight: 700;
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+  color: rgb(17, 24, 39);
+}
+
+.job-description-content h2 {
+  font-size: 0.875rem;
+  font-weight: 700;
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+  color: rgb(17, 24, 39);
+}
+
+.job-description-content h3 {
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-top: 0.5rem;
+  margin-bottom: 0.25rem;
+  color: rgb(17, 24, 39);
+}
+
+.job-description-content p {
+  margin-bottom: 0.5rem;
+  text-align: justify;
+  line-height: 1.5;
+}
+
+.job-description-content ul,
+.job-description-content ol {
+  margin-bottom: 0.75rem;
+  padding-left: 1rem;
+}
+
+.job-description-content li {
+  margin-bottom: 0.25rem;
+  text-align: justify;
+  line-height: 1.5;
+}
+
+.job-description-content ul li {
+  list-style-type: disc;
+}
+
+.job-description-content ol li {
+  list-style-type: decimal;
+}
+
+.job-description-content strong,
+.job-description-content b {
+  font-weight: 700;
+  color: rgb(17, 24, 39);
+}
+
+.job-description-content em,
+.job-description-content i {
+  font-style: italic;
+}
+
+/* Thin scrollbar for job description */
+.scrollbar-thin {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(107, 114, 128, 0.5) transparent;
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background-color: rgba(107, 114, 128, 0.5);
+  border-radius: 3px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(107, 114, 128, 0.7);
+}
+
+/* ── Spotlight Search Glassmorphism ── */
+@keyframes spotlight-glow {
+
+  0%,
+  100% {
+    opacity: 0.5;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes spotlight-gradient-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spotlight-shimmer {
+  0% {
+    background-position: -200% center;
+  }
+
+  100% {
+    background-position: 200% center;
+  }
+}
+
+@keyframes spotlight-pulse-ring {
+  0% {
+    box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.2);
+  }
+
+  70% {
+    box-shadow: 0 0 0 6px rgba(99, 102, 241, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(99, 102, 241, 0);
+  }
+}
+
+@keyframes spotlight-float-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-8px) scale(0.98);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes spotlight-item-in {
+  0% {
+    opacity: 0;
+    transform: translateX(-6px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.spotlight-overlay {
+  background: radial-gradient(ellipse at 50% 0%, rgba(99, 102, 241, 0.08) 0%, transparent 70%);
+}
+
+.dark .spotlight-overlay {
+  background: radial-gradient(ellipse at 50% 0%, rgba(99, 102, 241, 0.12) 0%, transparent 70%);
+}
+
+.spotlight-glass {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow:
+    0 0 0 1px rgba(0, 0, 0, 0.03),
+    0 8px 40px -8px rgba(0, 0, 0, 0.12),
+    0 24px 56px -16px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+.dark .spotlight-glass {
+  background: rgba(15, 23, 42, 0.78);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.04),
+    0 8px 40px -8px rgba(0, 0, 0, 0.5),
+    0 24px 56px -16px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.spotlight-glass-card {
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dark .spotlight-glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.spotlight-glass-card:hover,
+.spotlight-glass-card[data-selected="true"] {
+  background: rgba(255, 255, 255, 0.8);
+  border-color: rgba(99, 102, 241, 0.15);
+  box-shadow: 0 2px 12px -2px rgba(99, 102, 241, 0.08);
+}
+
+.dark .spotlight-glass-card:hover,
+.dark .spotlight-glass-card[data-selected="true"] {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(99, 102, 241, 0.2);
+  box-shadow: 0 2px 12px -2px rgba(99, 102, 241, 0.12);
+}
+
+.spotlight-glow-border {
+  position: relative;
+}
+
+.spotlight-glow-border::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1px;
+  background: conic-gradient(from 0deg,
+      rgba(99, 102, 241, 0.3),
+      rgba(168, 85, 247, 0.2),
+      rgba(236, 72, 153, 0.2),
+      rgba(99, 102, 241, 0.1),
+      rgba(99, 102, 241, 0.3));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  animation: spotlight-glow 3s ease-in-out infinite, spotlight-gradient-rotate 8s linear infinite;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.spotlight-glow-border:focus-within::before {
+  opacity: 1;
+}
+
+.spotlight-input-shimmer::placeholder {
+  background: linear-gradient(90deg, #9ca3af 30%, #6366f1 50%, #9ca3af 70%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: spotlight-shimmer 4s linear infinite;
+}
+
+.spotlight-kbd {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04), inset 0 -1px 0 rgba(0, 0, 0, 0.06);
+}
+
+.dark .spotlight-kbd {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), inset 0 -1px 0 rgba(0, 0, 0, 0.3);
+}
+
+.spotlight-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.spotlight-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.spotlight-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.08);
+  border-radius: 100px;
+}
+
+.dark .spotlight-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.06);
+}

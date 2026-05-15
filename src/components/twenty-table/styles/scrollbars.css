@@ -1,0 +1,109 @@
+/**
+ * Custom scrollbar styles for RecordTable and SidePanel
+ * Matches Twenty CRM's modern, minimalist design
+ */
+
+/* ── Record Table Scrollbar (id="record-table") ── */
+#record-table::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+#record-table::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+#record-table::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 5px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+#record-table::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+  background-clip: padding-box;
+}
+
+#record-table::-webkit-scrollbar-thumb:active {
+  background: #6b7280;
+  background-clip: padding-box;
+}
+
+/* Dark mode — Record Table */
+:dark #record-table::-webkit-scrollbar-thumb {
+  background: #4b5563;
+  background-clip: padding-box;
+}
+
+:dark #record-table::-webkit-scrollbar-thumb:hover {
+  background: #6b7280;
+  background-clip: padding-box;
+}
+
+:dark #record-table::-webkit-scrollbar-thumb:active {
+  background: #9ca3af;
+  background-clip: padding-box;
+}
+
+/* ── Side Panel Scrollbar (.sidepanel-content) ── */
+.sidepanel-content::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.sidepanel-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sidepanel-content::-webkit-scrollbar-thumb {
+  background: #e5e7eb;
+  border-radius: 4px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+.sidepanel-content::-webkit-scrollbar-thumb:hover {
+  background: #d1d5db;
+  background-clip: padding-box;
+}
+
+.sidepanel-content::-webkit-scrollbar-thumb:active {
+  background: #9ca3af;
+  background-clip: padding-box;
+}
+
+/* Dark mode — Side Panel */
+:dark .sidepanel-content::-webkit-scrollbar-thumb {
+  background: #374151;
+  background-clip: padding-box;
+}
+
+:dark .sidepanel-content::-webkit-scrollbar-thumb:hover {
+  background: #4b5563;
+  background-clip: padding-box;
+}
+
+:dark .sidepanel-content::-webkit-scrollbar-thumb:active {
+  background: #6b7280;
+  background-clip: padding-box;
+}
+
+/* ── Firefox Scrollbar Styling ── */
+#record-table {
+  scrollbar-width: thin;
+  scrollbar-color: #d1d5db transparent;
+}
+
+:dark #record-table {
+  scrollbar-color: #4b5563 transparent;
+}
+
+.sidepanel-content {
+  scrollbar-width: thin;
+  scrollbar-color: #e5e7eb transparent;
+}
+
+:dark .sidepanel-content {
+  scrollbar-color: #374151 transparent;
+}

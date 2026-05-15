@@ -1,0 +1,16 @@
+/* Tailwind v4 entry — pulls in the upstream project's CSS so the page renders
+   with the real theme. Paths are resolved through `vite-plugin-tailwindcss`. */
+@import "tailwindcss";
+
+/* Source-repo CSS bundle (theme, base resets, custom utility classes, etc.) */
+@import "../../../Desktop/Stagiaires/stg_v3_web/src/css/config.reui.css";
+@import "../../../Desktop/Stagiaires/stg_v3_web/src/css/styles.css";
+@import "../../../Desktop/Stagiaires/stg_v3_web/src/css/custom.css";
+@import "../../../Desktop/Stagiaires/stg_v3_web/src/components/twenty-table/styles/scrollbars.css";
+
+/* Tell Tailwind v4 where to scan for class names. */
+@source "../../../Desktop/Stagiaires/stg_v3_web/src/**/*.{ts,tsx,js,jsx}";
+@source "./**/*.{ts,tsx}";
+
+html, body, #root { height: 100%; margin: 0; }
+body { background: #fff; }
